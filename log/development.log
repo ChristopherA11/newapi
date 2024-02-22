@@ -61627,3 +61627,121 @@ Processing by Api::V1::MobilesController#index as HTML
 Completed 200 OK in 10ms (Views: -1.4ms | ActiveRecord: 10.9ms | Allocations: 3930)
 
 
+Started GET "/" for ::1 at 2024-02-22 11:26:45 +0530
+Processing by HomePageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/malini/api-crud/public/packs
+[Webpacker] Hash: 2f4fd3b7a6b529933be1
+Version: webpack 4.47.0
+Time: 1075ms
+Built at: 22/02/2024 11:26:47 am
+                               Asset       Size  Chunks                         Chunk Names
+    js/Index-abdbe866d363f26870c3.js   2.49 MiB   Index  [emitted] [immutable]  Index
+js/Index-abdbe866d363f26870c3.js.map   2.64 MiB   Index  [emitted] [dev]        Index
+                       manifest.json  322 bytes          [emitted]              
+Entrypoint Index = js/Index-abdbe866d363f26870c3.js js/Index-abdbe866d363f26870c3.js.map
+[./app/javascript/api/ListItem.js] 22.1 KiB {Index} [built]
+[./app/javascript/common/App.jsx] 4.9 KiB {Index} [built]
+[./app/javascript/common/Comments.js] 3.26 KiB {Index} [built]
+[./app/javascript/common/EditMobiles.js] 1.54 KiB {Index} [built]
+[./app/javascript/common/Home.js] 1.45 KiB {Index} [built]
+[./app/javascript/common/MobileApi.js] 16.7 KiB {Index} [built]
+[./app/javascript/common/NavBar.js] 1.59 KiB {Index} [built]
+[./app/javascript/common/Post.js] 1.02 KiB {Index} [built]
+[./app/javascript/common/SearchForm2.js] 1.1 KiB {Index} [built]
+[./app/javascript/common/Users.js] 3.36 KiB {Index} [built]
+[./app/javascript/common/api.js] 102 bytes {Index} [built]
+[./app/javascript/common/store.js] 416 bytes {Index} [built]
+[./app/javascript/mobiles/mobileActions.js] 14.6 KiB {Index} [built]
+[./app/javascript/packs/Index.jsx] 1.38 KiB {Index} [built]
+[./app/javascript/reducers/rootReducer.js] 181 bytes {Index} [built]
+    + 112 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1700.1ms | Allocations: 5003)
+Completed 200 OK in 1702ms (Views: 1700.7ms | ActiveRecord: 0.0ms | Allocations: 5335)
+
+
+Started GET "/api/v1/mobiles" for ::1 at 2024-02-22 11:26:47 +0530
+Processing by Api::V1::MobilesController#index as HTML
+  [1m[36mMobile Load (5.4ms)[0m  [1m[34mSELECT "mobiles".* FROM "mobiles"[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 3795)
+
+
+Started GET "/" for ::1 at 2024-02-22 11:26:58 +0530
+Processing by HomePageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2482)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+Started GET "/api/v1/mobiles" for ::1 at 2024-02-22 11:26:58 +0530
+Processing by Api::V1::MobilesController#index as HTML
+  [1m[36mMobile Load (0.3ms)[0m  [1m[34mSELECT "mobiles".* FROM "mobiles"[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1085)
+
+
+Started POST "/api/v1/mobiles" for ::1 at 2024-02-22 11:27:08 +0530
+Processing by Api::V1::MobilesController#create as HTML
+  Parameters: {"model"=>"v29", "brand"=>"Samsung", "price"=>0, "spec"=>"best camera", "mobile"=>{"model"=>"v29", "brand"=>"Samsung", "price"=>0, "spec"=>"best camera"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:16:in `create'
+  [1m[36mMobile Create (1.6ms)[0m  [1m[32mINSERT INTO "mobiles" ("model", "brand", "price", "spec", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["model", "v29"], ["brand", "Samsung"], ["price", 0], ["spec", "best camera"], ["created_at", "2024-02-22 05:57:08.395559"], ["updated_at", "2024-02-22 05:57:08.395559"]]
+  ↳ app/controllers/api/v1/mobiles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:16:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 2206)
+
+
+Started PATCH "/api/v1/mobiles/283" for ::1 at 2024-02-22 11:27:20 +0530
+Processing by Api::V1::MobilesController#update as HTML
+  Parameters: {"model"=>"v29", "brand"=>"Samsung", "price"=>"35000", "spec"=>"best camera", "id"=>"283", "mobile"=>{"model"=>"v29", "brand"=>"Samsung", "price"=>"35000", "spec"=>"best camera"}}
+  [1m[36mMobile Load (0.4ms)[0m  [1m[34mSELECT "mobiles".* FROM "mobiles" WHERE "mobiles"."id" = $1 LIMIT $2[0m  [["id", 283], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mobiles_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:26:in `update'
+  [1m[36mMobile Update (1.7ms)[0m  [1m[33mUPDATE "mobiles" SET "price" = $1, "updated_at" = $2 WHERE "mobiles"."id" = $3[0m  [["price", 35000], ["updated_at", "2024-02-22 05:57:20.903803"], ["id", 283]]
+  ↳ app/controllers/api/v1/mobiles_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:26:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 2811)
+
+
+Started DELETE "/api/v1/mobiles/283" for ::1 at 2024-02-22 11:27:33 +0530
+Processing by Api::V1::MobilesController#destroy as HTML
+  Parameters: {"id"=>"283"}
+  [1m[36mMobile Load (0.5ms)[0m  [1m[34mSELECT "mobiles".* FROM "mobiles" WHERE "mobiles"."id" = $1 LIMIT $2[0m  [["id", 283], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mobiles_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:36:in `destroy'
+  [1m[36mMobile Destroy (1.6ms)[0m  [1m[31mDELETE FROM "mobiles" WHERE "mobiles"."id" = $1[0m  [["id", 283]]
+  ↳ app/controllers/api/v1/mobiles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:36:in `destroy'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 2344)
+
+
+Started GET "/" for ::1 at 2024-02-22 11:27:37 +0530
+Processing by HomePageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2479)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2808)
+
+
+Started GET "/api/v1/mobiles" for ::1 at 2024-02-22 11:27:37 +0530
+Processing by Api::V1::MobilesController#index as HTML
+  [1m[36mMobile Load (0.4ms)[0m  [1m[34mSELECT "mobiles".* FROM "mobiles"[0m
+  ↳ app/controllers/api/v1/mobiles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1085)
+
+
